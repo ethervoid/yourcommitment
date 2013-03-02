@@ -1,1 +1,1 @@
-[Hack for Good Valldolid](http://hackforgood.net/valladolid/)
+[Hack for Good Valladolid](http://hackforgood.net/valladolid/)
