@@ -5,63 +5,35 @@
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/underscore-1.1.6.js"></script>
     <script src="http://www.parsecdn.com/js/parse-1.1.15.min.js"></script>
+    <script type="text/javascript" src="libs/jquery-1.9.0.min.js"></script>    
+
+    <script type="text/javascript" src="js/ong.js"></script>
     
     <title>Your commitment</title>
   </head>
   <body onload="init()">
-    <div id="map"></div>
-    
-	 
+    <div class="ong">
+      <div class="logo">
+      </div>
+      <div class="ongname">
+      </div>
+      <div class="ongdescription">
+      </div>
+      <div class="map">
+        <!-- country code -->
+      </div>
+
+      <div class="projects">
+        <h2>PROYECTOS</h2>
+        <div class="name"></div>
+        <div class="description"></div>
+        <div class="donations"></div>
+        <div class="budget"></div>
+      </div>
     </div>
-    <script type="text/javascript" src="libs/jquery-1.9.0.min.js"></script>    
-
-    <script type="text/javascript" src="js/ong.js"></script>
-
-    <script type="text/javascript">
-
-    function init(){
-      var idONG = $.getUrlVar("ongId") || "6PD8MR6xC4";
-      var countryCode = $.getUrlVar("country") || "LYB";
-      Parse.initialize("PM0jwmEJo3cgKtMMmuYPc1Qtrlvuso8JodvtdMxg", "QsBj7lnBh0eiOLxgtYNOGZ7PJzjAsKZQpBAhIc2p");
     
+   
+    </div>
 
-      if(idONG && countryCode){
-    
-        var query = new Parse.Query("ONG");
-        query.equalTo("objectId", idONG);
-        query.find({
-          success: function(results) {
-          
-            console.log(results);
-            _.each(results, function(ong){
-              _.each(ong.attributes, function(atributo){
-                console.log(atributo);
-              });
-               var queryProject = new Parse.Query("Proyect");
-
-               queryProject.equalTo("ONG",ong);
-               queryProject.equalTo("country_code",countryCode);
-
-               
-               queryProject.find({
-                  success: function(projects) {
-                    _.each(projects,function(project){
-                      console.log(ong.attributes.name,project.attributes.description);
-                    });
-                  }
-               });
-            });
-          },
-          error: function(error) {
-            console.log("Error: " + error.code + " " + error.message);
-          }
-      });
-      }else{
-        alert("No data to search");
-      }
-  }
-
-
-    </script>
   </body>
 </html>
