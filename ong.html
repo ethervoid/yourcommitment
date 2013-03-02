@@ -18,36 +18,47 @@
     <script type="text/javascript" src="js/ong.js"></script>
 
     <script type="text/javascript">
-    function init(){
 
+    function init(){
+      var idONG = $.getUrlVar("ongId") || "6PD8MR6xC4";
+      var countryCode = $.getUrlVar("country") || "LYB";
       Parse.initialize("PM0jwmEJo3cgKtMMmuYPc1Qtrlvuso8JodvtdMxg", "QsBj7lnBh0eiOLxgtYNOGZ7PJzjAsKZQpBAhIc2p");
     
-      var query = new Parse.Query("ONG");
+
+      if(idONG && countryCode){
     
-      query.find({
-        success: function(results) {
-        
-          console.log(results);
-          _.each(results, function(ong){
-             var queryProject = new Parse.Query("Proyect");
+        var query = new Parse.Query("ONG");
+        query.equalTo("objectId", idONG);
+        query.find({
+          success: function(results) {
+          
+            console.log(results);
+            _.each(results, function(ong){
+              _.each(ong.attributes, function(atributo){
+                console.log(atributo);
+              });
+               var queryProject = new Parse.Query("Proyect");
 
-             queryProject.equalTo("ONG",ong);
-             queryProject.equalTo("country_code","LYB");
+               queryProject.equalTo("ONG",ong);
+               queryProject.equalTo("country_code",countryCode);
 
-             
-             queryProject.find({
-                success: function(projects) {
-                  _.each(projects,function(project){
-                    console.log(ong.attributes.name,project.attributes.description);
-                  });
-                }
-             });
-          });
-        },
-        error: function(error) {
-          console.log("Error: " + error.code + " " + error.message);
-        }
-    });
+               
+               queryProject.find({
+                  success: function(projects) {
+                    _.each(projects,function(project){
+                      console.log(ong.attributes.name,project.attributes.description);
+                    });
+                  }
+               });
+            });
+          },
+          error: function(error) {
+            console.log("Error: " + error.code + " " + error.message);
+          }
+      });
+      }else{
+        alert("No data to search");
+      }
   }
 
 
