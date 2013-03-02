@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="author" href="humans.txt" />    
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/underscore-1.1.6.js"></script>
+    <script src="http://www.parsecdn.com/js/parse-1.1.15.min.js"></script>
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v2/themes/css/cartodb.ie.css" />
+    <![endif]-->
+    <title>Your commitment</title>
+  </head>
+  <body onload="init()">
+    <div id="map"></div>
+    
+	 
+    </div>
+    <script type="text/javascript" src="libs/jquery-1.9.0.min.js"></script>    
+
+    <script type="text/javascript" src="js/ong.js"></script>
+
+    <script type="text/javascript">
+    function init(){
+
+      Parse.initialize("PM0jwmEJo3cgKtMMmuYPc1Qtrlvuso8JodvtdMxg", "QsBj7lnBh0eiOLxgtYNOGZ7PJzjAsKZQpBAhIc2p");
+    
+      var query = new Parse.Query("ONG");
+    
+      query.find({
+        success: function(results) {
+        
+          console.log(results);
+          _.each(results, function(ong){
+             var queryProject = new Parse.Query("Proyect");
+
+             queryProject.equalTo("ONG",ong);
+             queryProject.equalTo("country_code","LYB");
+
+             
+             queryProject.find({
+                success: function(projects) {
+                  console.log(projects);
+                }
+             });
+          });
+        },
+        error: function(error) {
+          console.log("Error: " + error.code + " " + error.message);
+        }
+    });
+  }
+
+
+    </script>
+  </body>
+</html>
