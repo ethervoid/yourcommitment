@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "Your Commitment": {
+            "applicationId": "PM0jwmEJo3cgKtMMmuYPc1Qtrlvuso8JodvtdMxg", 
+            "masterKey": "gtRZhpZ23tvYctIe4APf9EPqEIJRdApJM7yR5HuJ"
+        }, 
+        "_default": {
+            "link": "Your Commitment"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.2.1"
+    }
+}
