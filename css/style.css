@@ -41,7 +41,7 @@ a {
     text-decoration: none;
 }
 
-.country_score {
+.country_info_window {
   display: none;
   position: absolute;
   z-index: 1000;
