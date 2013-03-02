@@ -1,0 +1,30 @@
+/* TEAM */
+Developer: Mario de Frutos
+Twitter: @ethervoid
+From:Valladolid, Spain
+
+Developer: Jorge Maroto
+Twitter: @patoroco
+From:Valladolid, Spain
+
+Developer: Jorge Jimenez
+Twitter: @semurat
+From:Valladolid, Spain
+
+Developer: Alvaro García Loaisa
+Twitter: @aloaisa
+From:Valladolid, Spain
+
+Developer: Amalia Hernández
+Twitter: @amaliahern
+From:Valladolid, Spain
+
+Designer: Mario del Valle
+Twitter: @batimario
+From:Valladolid, Spain
+
+/* SITE */
+Last update:2013/03/02
+Language:English 
+Doctype:HTML5
+IDE: Sublime Text, Vim, Photoshop
