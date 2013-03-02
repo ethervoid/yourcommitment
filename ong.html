@@ -5,9 +5,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/underscore-1.1.6.js"></script>
     <script src="http://www.parsecdn.com/js/parse-1.1.15.min.js"></script>
-    <!--[if lte IE 8]>
-    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v2/themes/css/cartodb.ie.css" />
-    <![endif]-->
+    
     <title>Your commitment</title>
   </head>
   <body onload="init()">
@@ -39,7 +37,9 @@
              
              queryProject.find({
                 success: function(projects) {
-                  console.log(projects);
+                  _.each(projects,function(project){
+                    console.log(ong.attributes.name,project.attributes.description);
+                  });
                 }
              });
           });
