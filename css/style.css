@@ -20,63 +20,105 @@ body {
   background-color: #3a3a3a;
 }
 
-.balloon {
-    background: #2a2a2a;
-    -moz-border-radius: 150px;
-    -o-border-radius: 150px;
-    -webkit-border-radius: 150px;
-    border-radius: 200px;
-    height: 210px;
-    margin: auto;
-    padding-top: 50px;
-    width: 260px;
-}
-
 h1 {
     border-bottom: 1px solid #d9d9d9;
 }
 
-a {
-    color: #be2221;
+.leyend-content a {
+    color: #53bcf1;
     text-decoration: none;
+}
+
+.leyend-content a:hover{
+  text-decoration: underline;
+}
+
+.logo{
+  background: url('../img/imagotipo.png') no-repeat;
+  height: 260px;
+  margin: 0 auto;
+  margin-top: 50px; 
+  width: 260px;
+}
+
+.box {
+    background: #2a2a2a;
+    margin: auto;
+    padding-top: 20px;
+    position: absolute;
+    width: 300px;
+    z-index: 2;
+}
+
+.peak{
+  background: #2A2A2A;
+  height: 20px;
+  position: absolute;
+  right: -155px;
+  top: 260px;
+  width: 20px;
+  text-align: center;
+  margin-left: 45%;
+  margin-top: -10px;
+  z-index: 1;
+  transform: rotate(45deg);
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -webkit-transform: rotate(45deg); /* Safari and Chrome */
+  -o-transform: rotate(45deg); /* Opera */
+  -moz-transform: rotate(45deg); /* Firefox */
 }
 
 .country_info_window {
   display: none;
   position: absolute;
-  z-index: 1000;
 }
 .country_name{
-  color: #AAA;
-  font-size: 1.25em;
+  color: #aaa;
+  font-size: 1.5em;
   margin: 0 auto;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   text-align: center;
   width: 200px;
 }
 
-.line{
-  width: 60%;
-  height: 1px;
-  background: #AAA;
-  text-align: center;
-  margin: 0 auto; 
+.ong_list{
+  margin: 0px;
+  padding: 0px;
 }
 
-.chart{
-    padding-top: 15px;
-    float: left;
-    margin-left: 14%;
+.ong_name{
+  background: url('../img/caritas-icon.png') 15px 15px no-repeat;
+  height: 50px; 
+  width: 300px;
+  list-style: none;
+  z-index: 1000;
 }
 
-.balloon .percentage_ranking,
-.balloon .percentage_score,
-.balloon .label {
-    text-align: center;
-    color: #BBB;
-    font-weight: 100;
-    font-size: 0.9em;
-    margin-bottom: 0.3em;
+.ong_name a{
+  color: #aaa;
+  margin: 0 auto;
+  padding: 15px 0px 0px 70px;
+  text-decoration: none;
+  height: 35px;
+  width: 178px;
+}
+
+.ong_list li a, .ong_list li span{
+  color: #fff;
+  float: left;
+}
+
+.ong_name:hover{
+  background: #f68d5d url('../img/caritas-icon.png') 15px 15px no-repeat;
+  cursor: pointer;
+}
+
+.ong_name{
+  margin-right: 75px;
+}
+
+.ong_name span{
+  padding-top: 15px;
 }
 
 .easyPieChart {
@@ -87,23 +129,6 @@ a {
   position: absolute;
   top: 0;
   left: 0;
-}
-
-.peak{
-  background: #2A2A2A;
-  height: 20px;
-  width: 20px;
-  text-align: center;
-  margin-left: 45%;
-  margin-top: -15px;
-  transform: rotate(45deg);
-  -ms-transform: rotate(45deg); /* IE 9 */
-  -webkit-transform: rotate(45deg); /* Safari and Chrome */
-  -o-transform: rotate(45deg); /* Opera */
-  -moz-transform: rotate(45deg); /* Firefox */
-}
-.clear {
-  clear: both
 }
 
 /*Style leyend*/
