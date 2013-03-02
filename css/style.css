@@ -109,7 +109,7 @@ a {
 /*Style leyend*/
 
 .leyend-wrapper{
-  background: rgba(40,40,40,0.8);
+  background: rgba(40,40,40,1);
   bottom: 0px;
   display: block;
   height: 100%;
