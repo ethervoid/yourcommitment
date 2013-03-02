@@ -12,12 +12,12 @@
 
 body {
     font: 15px 'nexa_lightregular', 'Helvetica','Arial', sans-serif;
-    color: #333;
+    color: #3a3a3a;
     margin: 0px;
 }
 
 .map-wrapper {
-  background-color: #333;
+  background-color: #3a3a3a;
 }
 
 .balloon {
@@ -146,70 +146,62 @@ a {
   margin: 0 auto;
   margin-top: 8%;
   padding: 0px;
+  color: dimgray;
 }
 
-.color{
+.circle, .last-circle{
   float: left;
-  width: 20px;
-  height: 20px;
-  padding: 0px;
+  margin: 0px 1.9% 0px 0px;
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
   -moz-border-radius: 20px;
   -o-border-radius: 20px;
   -webkit-border-radius: 20px;
   border-radius: 20px;
-}
-
-.circle{
-  margin: 0px 4% 0px 0px;
+  padding: 0px;
 }
 
 .last-circle{
   margin: 0px;
 }
 
-.range0{
-  background: #FFFFFF;
+.range-nodata{
+  background: #333;
+}
+
+.range5{
+  background: #FDED99;
 }
 
 .range10{
-  background: #fded99;
+  background: #FCDE73;
 }
 
 .range20{
-  background: #fcde73;
+  background: #F6C55C;
 }
 
 .range30{
-  background: #f6c55c;
+  background: #EDA853;
 }
 
 .range40{
-  background: #eda853;
+  background: #E38549;
 }
 
 .range50{
-  background: #e38549;
-}
-
-.range60{
   background: #E49662;
 }
 
-.range70{
-  background: #DD7240;
-}
-
-.range80{
-  background: #e35530;
-}
-
-.range90{
-  background: #CD2913;
+.range75{
+  background: #E35530;
 }
 
 .range100{
   background: #831A0C;
 }
+
 
 .range-text{
   list-style: none;
