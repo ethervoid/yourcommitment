@@ -104,7 +104,7 @@ h1 {
 }
 
 .ong_name{
-  background: url('../img/caritas-icon.png') 15px 15px no-repeat;
+  background: url('../img/yc-icon.png') 15px 15px no-repeat;
   height: 50px; 
   width: 300px;
   list-style: none;
@@ -126,7 +126,7 @@ h1 {
 }
 
 .ong_name:hover{
-  background: #f68d5d url('../img/caritas-icon.png') 15px 15px no-repeat;
+  background: #f68d5d url('../img/yc-icon.png') 15px 15px no-repeat;
   cursor: pointer;
 }
 
