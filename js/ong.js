@@ -35,7 +35,7 @@ function init() {
                     queryProject.find({
                         success: function (projects) {
                             _.each(projects, function (project) {
-                                $('.contentProjects ul').html("<li><div class='name'>" + project.attributes.name + "</div><div class'description'>" + project.attributes.description + "</div><div class='donations'>" + project.attributes.amount + "</div><div class='budget'>" + project.attributes.totalAmount + "</div></li>"); 
+                                $('.contentProjects ul').html("<li><div class='name'>" + project.attributes.name + "</div><div class'description'>" + project.attributes.description + "</div><div class='donations'><span class='detail_donation'>" + project.attributes.amount + "</span></div><div class='budget'><span class='detail_donation'>" + project.attributes.totalAmount + "</span></div></li>"); 
                             });
                         }
                     });
