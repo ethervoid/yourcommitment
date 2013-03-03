@@ -354,3 +354,27 @@ h1 {
   width: 100%;
   margin-bottom: 40px;
 }
+
+.donations, .budget{
+  width: 200px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.title_donation{
+  float: left;
+  color: #ddd;
+  margin: 0px 40px 0px 0px;
+}
+
+.detail_donation{
+  font-size: 2em;
+  float: left;
+  color: #ddd;
+  margin-right: 30px;
+
+}
+
+.description{
+  margin-bottom: 30px;
+}
