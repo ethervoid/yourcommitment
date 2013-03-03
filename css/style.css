@@ -322,11 +322,15 @@ h1 {
   color: #aaa;
 }
 
-.titulo p{
+.titulo p, .contentProjects ul{
   color: #aaa;
   padding: 40px;
   padding-top: 20px;
   text-align: justify;
+}
+
+.contentProjects li{
+  list-style: none;
 }
 
 .contentDescription{
@@ -349,4 +353,28 @@ h1 {
   height: 300px;
   width: 100%;
   margin-bottom: 40px;
+}
+
+.donations, .budget{
+  width: 200px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.title_donation{
+  float: left;
+  color: #ddd;
+  margin: 0px 40px 0px 0px;
+}
+
+.detail_donation{
+  font-size: 2em;
+  float: left;
+  color: #ddd;
+  margin-right: 30px;
+
+}
+
+.description{
+  margin-bottom: 30px;
 }
