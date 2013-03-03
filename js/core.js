@@ -25,6 +25,9 @@ var YourCommitment = YourCommitment || {};
                 that.click_position.x = e.pageX;
                 that.click_position.y = e.pageY;
             });
+            $('.country_info_window .close').click(function (e) {
+                $('.country_info_window').fadeOut(200);
+            });
             this.paintVisualization();
         },
         position : null,
@@ -37,7 +40,6 @@ var YourCommitment = YourCommitment || {};
                         that.position = latlng;
                         var parse_query = new YourCommitment.Query();
                         parse_query.query("ONGCountry", data.iso3, function (results) {
-                            console.log(results);
                             $(".ong_list").html("");
                             _.each(results, function (ong) {
                                 if (ong.attributes.ONG !== undefined) {
@@ -51,6 +53,12 @@ var YourCommitment = YourCommitment || {};
                             $(".country_name").text(data.country);
                             $(".country_info_window").fadeIn(200);
                         });
+                    })
+                    .on('featureOver', function (e, latlng, pos, data) {
+                        $('.leaflet-container').css("cursor", "pointer");
+                    })
+                    .on('featureOut', function (e, latlng, pos, data) {
+                        $(".leaflet-container").css('cursor', '-webkit-grab');
                     });
                     vis.getNativeMap().on("move", function (e) { 
                         if (that.position !== null) {
