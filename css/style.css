@@ -289,7 +289,7 @@ h1 {
 
 .columna_drch{
   background: #3a3a3a;
-  width: auto;
+  width: 60%;
   padding: 0px 60px 0px 60px;
   float: left;
   padding-bottom: 30000px;
@@ -313,7 +313,7 @@ h1 {
   display: block;
   height: 50px;
   margin: 20px 0px 0px 0px;
-  width: 800px;
+  width: 100%;
 }
 
 .titulo h2{
@@ -334,20 +334,20 @@ h1 {
   background: #555;
   display: block;
   height: 300px;
-  width: 800px;
+  width: 100%;
 }
 
 .contentMap{
   background: #555;
   display: block;
   height: 300px;
-  width: 800px;
+  width: 100%;
 }
 
 .contentProjects{
   background: #555;
   display: block;
   height: 300px;
-  width: 800px;
+  width: 100%;
   margin-bottom: 40px;
 }
