@@ -1,13 +1,12 @@
 @font-face {
     font-family: 'nexa_lightregular';
-    src: url('./fonts/nexa_light-webfont.eot');
-    src: url('./fonts/nexa_light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('./fonts/nexa_light-webfont.woff') format('woff'),
-         url('./fonts/nexa_light-webfont.ttf') format('truetype'),
-         url('./fonts/nexa_light-webfont.svg#nexa_lightregular') format('svg');
+    src: url('../fonts/nexa_light-webfont.eot');
+    src: url('../fonts/nexa_light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/nexa_light-webfont.woff') format('woff'),
+         url('../fonts/nexa_light-webfont.ttf') format('truetype'),
+         url('../fonts/nexa_light-webfont.svg#nexa_lightregular') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 body {
@@ -37,7 +36,7 @@ h1 {
   background: url('../img/imagotipo.png') no-repeat;
   height: 260px;
   margin: 0 auto;
-  margin-top: 50px; 
+  margin-top: 30px; 
   width: 260px;
 }
 
@@ -46,8 +45,23 @@ h1 {
     margin: auto;
     padding-top: 20px;
     position: absolute;
-    width: 300px;
+    width: 320px;
     z-index: 2;
+}
+
+.close{
+  background: url('../img/close-off.png') no-repeat;
+  bottom: -22px;
+  cursor: pointer;
+  height: 42px;
+  position: absolute;
+  left: 300px;
+  width: 42px;
+  z-index: 3;
+}
+
+.close:hover{
+  background: url('../img/close-on.png') no-repeat;
 }
 
 .peak{
@@ -84,6 +98,8 @@ h1 {
 .ong_list{
   margin: 0px;
   padding: 0px;
+  height: 200px;
+  overflow: auto;
 }
 
 .ong_name{
@@ -135,14 +151,18 @@ h1 {
 
 .leyend-wrapper{
   background: rgba(40,40,40,1);
-  bottom: 0px;
   display: block;
   height: 100%;
-  left: 0px;
   min-width: 360px;
   padding: 10px;
-  position: absolute;
   width: 360px;
+  float: left;
+}
+
+.leyend-wrapper{
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
 }
 
 .leyend-content{
@@ -156,6 +176,8 @@ h1 {
 .leyend-slogan{
   font-size: 3em;
   color: #FF8557;
+  margin: 30px auto;
+  margin
   width: 80%;
 }
 
@@ -167,11 +189,12 @@ h1 {
 }
 
 .colors{
-  text-align: center;
-  margin: 0 auto;
+  color: #fff;
   margin-top: 8%;
+  margin: 0 auto;
   padding: 0px;
-  color: dimgray;
+  text-align: center;
+  text-shadow: 0.1em 0.1em #444;
 }
 
 .circle, .last-circle{
@@ -179,7 +202,7 @@ h1 {
   margin: 0px 1.9% 0px 0px;
   height: 35px;
   width: 35px;
-  line-height: 35px;
+  line-height: 38px;
   -moz-border-radius: 20px;
   -o-border-radius: 20px;
   -webkit-border-radius: 20px;
@@ -247,4 +270,49 @@ h1 {
 
 .text-last{
   margin: 0px;
+}
+
+/* Estilos para la página de ONG */
+
+.leyend-ong{
+  background: rgba(40,40,40,1);
+  width: 360px;
+  height: 100%;
+  float: left;
+}
+
+.ong_wrapper{
+  background: #3a3a3a;
+  height: 100%;
+  margin-left: 360px;
+  width: auto;
+  padding: 0px 60px 0px 60px;
+}
+
+.ong{
+  width: 100%;
+  height: 30px;
+  padding-top: 60px;
+}
+
+.logo_ong{
+  width: 100px;
+  height: 100px;
+  border: 1px solid red;
+  float: left;
+}
+
+.ongname{
+  margin: 20px 0px 0px 50px;
+  width: 600px;
+  height: 50px;
+  background: rgba(40,40,40,1);
+  float: left;
+}
+
+.ongname h2{
+  font-size: 1.8em;
+  margin: 0px 0px 0px 10px;
+  padding: 8px;
+  color: #aaa;
 }
