@@ -322,11 +322,15 @@ h1 {
   color: #aaa;
 }
 
-.titulo p{
+.titulo p, .contentProjects ul{
   color: #aaa;
   padding: 40px;
   padding-top: 20px;
   text-align: justify;
+}
+
+.contentProjects li{
+  list-style: none;
 }
 
 .contentDescription{
